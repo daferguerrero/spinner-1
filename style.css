@@ -1,0 +1,37 @@
+/* Aplicar estilo general a todos los elementos */
+*{
+    box-sizing: border-box; /* Esto sirve p q los tamaños se apliquen correctamente cuando tengan un padding o un margin */
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+.spinner{
+    border: 4px solid rgba(0,0,0,.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-left-color: #f00;
+
+    animation: girar-spinner 1s linear infinite;
+}
+
+.contenedor-spinner{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes girar-spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
